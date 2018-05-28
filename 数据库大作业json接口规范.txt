@@ -1,0 +1,25 @@
+数据库大作业json接口规范
+
+返回athlete格式：
+
+[
+    {
+        "age": 0,
+        "ageGroupId": 1,
+        "cultureGrade": 0,
+        "id": 3,
+        "name": "liu",
+        "teamId": 4
+    },
+    {
+        "age": 0,
+        "ageGroupId": 1,
+        "cultureGrade": 0,
+        "id": 4,
+        "name": "han",
+        "teamId": 4
+    }
+]
+
+返回team格式；
+
