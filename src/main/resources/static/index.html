@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--bootstrap用于idea自动提醒功能-->
+
+    <link rel="stylesheet" href="dist/css/bootstrap.css"/>
+    <title>login</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+<!--预留的导航部分-->
+<div id="navigation">
+    <nav class="navbar navbar-expand bg-dark navbar-dark center" >
+        <ul class="navbar-nav offset-1">
+            <li class="nav-item">
+                <a class="nav-link" href="registTeam.html">队伍注册</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">队伍编排</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">打分</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="dropdown-toggle nav-link" href="#" id="navDrop" data-toggle="dropdown">
+                    查询
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">队伍查询</a>
+                    <a class="dropdown-item" href="#">编排查询</a>
+                    <a class="dropdown-item" href="#">成绩查询</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="container">
+
+    <div class="container">
+        <table id="teamTable" class="table">
+            <tr>
+                <th>id</th>
+                <th>teamName</th>
+                <th>leaderName</th>
+                <th>leaderPhoneNumber</th>
+                <th>leaderIdCard</th>
+                <th>doctorName</th>
+                <th>doctorPhoneNumber</th>
+                <th>doctorIdCard</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</body>
+</html>

@@ -1,11 +1,10 @@
 package com.ath.dao;
 
 import com.ath.entity.Referee;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
+
+import java.sql.Ref;
 
 @Repository
 public interface RefereeMapper {
@@ -24,4 +23,8 @@ public interface RefereeMapper {
             @Result(property = "refIdCard",column = "ref_idCard")
     })
     public Referee findRefByName(String name);
+
+    @Select("SELECT * FROM referee WHERE ref_id = #{id}")
+    @ResultMap("refereeMap")
+    Referee findRefById(int id);
 }

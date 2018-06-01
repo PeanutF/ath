@@ -1,12 +1,10 @@
 package com.ath.dao;
 
 import com.ath.entity.Team;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Repository
 public interface TeamMapper {
@@ -28,5 +26,9 @@ public interface TeamMapper {
             @Result(property = "teamUsername",column = "team_username"),
             @Result(property = "teamPassword",column = "team_password")
     })
-    public int findIdByName(String teamName);
+    public Team findIdByName(String teamName);
+
+    @Select("SELECT * FROM team")
+    @ResultMap("teamMap")
+    List<Team> getTeamAll();
 }

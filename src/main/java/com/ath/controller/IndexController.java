@@ -6,8 +6,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class IndexController {
 
-    @RequestMapping("/")
-    public String home(){
-        return "hello";
-    }
 }

@@ -3,9 +3,27 @@ package com.ath.entity;
 public class GradeForm {
 
     private int refId;//裁判的id
-    private int ath_id;
+    private int athId;
     private int grade;
     private String objName;
+    private String athName;
+    private String refereeName;
+
+    public String getAthName() {
+        return athName;
+    }
+
+    public void setAthName(String athName) {
+        this.athName = athName;
+    }
+
+    public String getRefereeName() {
+        return refereeName;
+    }
+
+    public void setRefereeName(String refereeName) {
+        this.refereeName = refereeName;
+    }
 
     public int getRefId() {
         return refId;
@@ -15,12 +33,12 @@ public class GradeForm {
         this.refId = refId;
     }
 
-    public int getAth_id() {
-        return ath_id;
+    public int getAthId() {
+        return athId;
     }
 
-    public void setAth_id(int ath_id) {
-        this.ath_id = ath_id;
+    public void setAthId(int ath_id) {
+        this.athId = ath_id;
     }
 
     public int getGrade() {

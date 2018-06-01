@@ -39,7 +39,7 @@ public class InsertController {
     }
 
     @RequestMapping("/team")
-    public void insert(@RequestBody Map<String,String> map){
+    public String insert(@RequestBody Map<String,String> map){
         JSONObject jsonObject = JSONObject.parseObject(JSON.toJSONString(map));
         JSONObject teamObj = jsonObject.getJSONObject("team");
         JSONArray membersArr = jsonObject.getJSONArray("members");
@@ -47,6 +47,7 @@ public class InsertController {
         Team team = JSON.parseObject(teamObj.toJSONString(),Team.class);
         team.setMembers(athletes);
         addService.addTeam(team);
+        return "success";
     }
 
     @RequestMapping("/referee")

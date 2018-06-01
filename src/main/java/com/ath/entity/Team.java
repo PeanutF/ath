@@ -6,10 +6,11 @@ import java.util.List;
 public class Team {
 
     private int id;
+    private String teamName;
     private String leaderName, leaderPhoneN, leaderIdCard;
     private String doctorName, doctorPhoneN, doctorIdCard;
     private List<Athlete> members;
-    private String teamName,teamUsername,teamPassword;
+    private String teamUsername,teamPassword;
 
     public Team(){
         super();

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ObjMapper {
 
-    @Select("SELECT * FROM obj WHERE obj_name = #{name}")
+    @Select("SELECT * FROM object WHERE obj_name = #{name}")
     @Results(id = "objMap",value = {
             @Result(property = "name",column = "obj_name"),
             @Result(property = "id",column = "obj_id"),

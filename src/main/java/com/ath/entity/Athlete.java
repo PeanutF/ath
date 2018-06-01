@@ -9,6 +9,24 @@ public class Athlete {
     private String idCard;
     private int cultureGrade;
     private int age;
+    private String teamName;
+    private String ageGroup;
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public String getAgeGroup() {
+        return ageGroup;
+    }
+
+    public void setAgeGroup(String ageGroup) {
+        this.ageGroup = ageGroup;
+    }
 
     public int getId() {
         return id;

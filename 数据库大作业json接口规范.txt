@@ -1,5 +1,41 @@
 数据库大作业json接口规范
 
+成绩填写post数据格式：
+{
+	"athNames":["liu","han"],
+	"objectName":"a",
+	"refereeName":"a",
+	"groupNumber":"1"
+}
+
+team报名格式：
+{
+	"team":{
+		"teamName": "hahaha",
+		"leaderName":"a",
+		"leaderPhoneN":"1",
+		"leaderIdCard":"1",
+		"doctorName":"a",
+		"doctorPhoneN":"1",
+		"doctorIdCard":"1",
+		"teamUsername":"a",
+		"teamPassword":"a"
+	},
+	"members":[{
+		"name":"liu",
+		"ageGroupId":"1",
+		"idCard":"1",
+		"cultureGrade":"90",
+		"age":"18"
+	},{
+		"name":"han",
+		"ageGroupId":"1",
+		"idCard":"1",
+		"cultureGrade":"90",
+		"age":"18"
+	}]
+}
+
 返回athlete格式：
 
 [
@@ -22,4 +58,29 @@
 ]
 
 返回team格式；
-
+[
+    {
+        "doctorIdCard": "1",
+        "doctorName": "a",
+        "doctorPhoneN": "1",
+        "id": 4,
+        "leaderIdCard": "1",
+        "leaderName": "a",
+        "leaderPhoneN": "1",
+        "teamName": "hahaha",
+        "teamPassword": "a",
+        "teamUsername": "a"
+    },
+    {
+        "doctorIdCard": "2",
+        "doctorName": "b",
+        "doctorPhoneN": "2",
+        "id": 5,
+        "leaderIdCard": "2",
+        "leaderName": "b",
+        "leaderPhoneN": "2",
+        "teamName": "aghagag",
+        "teamPassword": "b",
+        "teamUsername": "b"
+    }
+]

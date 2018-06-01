@@ -40,7 +40,7 @@ public class GradeService {
             competeForm.setObjId(obj.getId());
             formMapper.insertCompeteForm(competeForm);
             GradeForm gradeForm = new GradeForm();
-            gradeForm.setAth_id(athlete.getId());
+            gradeForm.setAthId(athlete.getId());
             gradeForm.setObjName(obj.getName());
             gradeForm.setRefId(referee.getId());
             formMapper.insertGradeForm(gradeForm);

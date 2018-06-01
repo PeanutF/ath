@@ -25,17 +25,13 @@ public interface AthleteMapper {
     @org.apache.ibatis.annotations.ResultMap("athleteMap")
     Athlete getByName(String name);
 
+    @Select("SELECT * FROM athlete WHERE ath_id = #{id}")
+    @org.apache.ibatis.annotations.ResultMap("athleteMap")
+    Athlete getById(int id);
+
     @Insert("INSERT INTO athlete(age_group_id,team_id,ath_name,ath_idCard,ath_culture_grade,ath_age) " +
             "VALUES(#{ageGroupId},#{teamId},#{name},#{idCard},#{cultureGrade},#{age})")
     void insert(Athlete athlete);
 
-
-//    int id;
-//    int ageGroupId;
-//    int teamId;
-//    String name;
-//    String idCard;
-//    int cultureGrade;
-//    int age;
 
 }
