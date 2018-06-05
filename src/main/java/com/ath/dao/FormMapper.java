@@ -35,6 +35,6 @@ public interface FormMapper {
     })
     public List<GradeForm> findGradeFormAll();
 
-    @Update("UPDATE grade_form SET grade = #{grade} WHERE ath_id = #{athId} AND ref_id = #{refId}")
-    void setGrade(int grade,int athId,int refId);
+    @Update("UPDATE grade_form SET grade=#{grade,jdbcType=INTEGER} WHERE ath_id=#{athId} AND ref_id=#{refId}")
+    void setGrade(@Param("grade") int grade,@Param("athId") int athId,@Param("refId") int refId);
 }

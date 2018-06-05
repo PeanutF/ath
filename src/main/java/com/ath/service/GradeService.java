@@ -46,4 +46,13 @@ public class GradeService {
             formMapper.insertGradeForm(gradeForm);
         }
     }
+
+    public void addGrade(List<String> athNames,String refName,int[] grades){
+        int refId = refereeMapper.findRefByName(refName).getId();
+        for(String name : athNames){
+            int athId = athleteMapper.getByName(name).getId();
+            int grade = grades[athNames.indexOf(name)];
+            formMapper.setGrade(grade,athId,refId);
+        }
+    }
 }

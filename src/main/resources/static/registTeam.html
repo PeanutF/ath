@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--bootstrap用于idea自动提醒功能-->
+
+    <title>login</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/registTeam.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <div>
+            <nav class="navbar navbar-expand bg-dark navbar-dark center" >
+                <ul class="navbar-nav offset-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="registTeam.html">队伍注册</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="arrange.html">队伍编排</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="score.html">打分</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link" href="#" id="navDrop" data-toggle="dropdown">
+                            查询
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="index.html">队伍查询</a>
+                            <a class="dropdown-item" href="#">编排查询</a>
+                            <a class="dropdown-item" href="#">成绩查询</a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </nav>
+        </div>
+
+        <br>
+
+        <div class="container" >
+            <form>
+                    <div class="col-7 container">
+                        <div class="form-group">
+                            <label for="team_name">team name:</label>
+                            <input type="text" class="form-control" id="team_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="leader_name">leader name:</label>
+                            <input type="text" class="form-control" id="leader_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="leader_phoneN">leader phone number:</label>
+                            <input type="text" class="form-control" id="leader_phoneN">
+                        </div>
+                        <div class="form-group">
+                            <label for="leader_idCard">leader idCard:</label>
+                            <input type="text" class="form-control" id="leader_idCard">
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor_name">doctor name:</label>
+                            <input type="text" class="form-control" id="doctor_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor_idCard">doctor idCard:</label>
+                            <input type="text" class="form-control" id="doctor_idCard">
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor_phoneN">doctor phone number:</label>
+                            <input type="text" class="form-control" id="doctor_phoneN">
+                        </div>
+                        <div class="form-group">
+                            <label for="team_username">username:</label>
+                            <input type="text" class="form-control" id="team_username">
+                        </div>
+                        <div class="form-group">
+                            <label for="team_password">password:</label>
+                            <input type="text" class="form-control" id="team_password">
+                        </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>队员1</label>
+                            <div class="form-group">
+                                <label for="ath_name">athlete name:</label>
+                                <input type="text" class="form-control" id="ath_name">
+                            </div>
+                            <div class="form-group">
+                                <label>age group:</label>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox" value="1"> 7-8女子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox" value="2"> 9-10女子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox" value="3"> 10-11女子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox" value="4"> 7-8男子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox" value="5"> 9-10男子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox" value="6"> 11-12男子组
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ath_idCard">athlete idCard:</label>
+                                <input type="text" class="form-control" id="ath_idCard">
+                            </div>
+                            <div class="form-group">
+                                <label for="ath_culture_grade">athlete cultural grade:</label>
+                                <input type="text" class="form-control" id="ath_culture_grade">
+                            </div>
+                            <div class="form-group">
+                                <label for="ath_age">athlete age:</label>
+                                <input type="text" class="form-control" id="ath_age">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label>队员2</label>
+                            <div class="form-group">
+                                <label for="ath_name">athlete name:</label>
+                                <input type="text" class="form-control" id="ath_name2">
+                            </div>
+
+                            <div class="form-group">
+                                <label>age group:</label>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox2" value="1"> 7-8女子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox2" value="2"> 9-10女子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox2" value="3"> 10-11女子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox2" value="4"> 7-8男子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox2" value="5"> 9-10男子组
+                                </div>
+                                <div class="custom-radio">
+                                    <input type="radio" name="ageBox2" value="6"> 11-12男子组
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ath_idCard">athlete idCard:</label>
+                                <input type="text" class="form-control" id="ath_idCard2">
+                            </div>
+                            <div class="form-group">
+                                <label for="ath_culture_grade">athlete cultural grade:</label>
+                                <input type="text" class="form-control" id="ath_culture_grade2">
+                            </div>
+                            <div class="form-group">
+                                <label for="ath_age">athlete age:</label>
+                                <input type="text" class="form-control" id="ath_age2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container center">
+                    <button type="submit" class="btn btn-primary" id="registTeamSub">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

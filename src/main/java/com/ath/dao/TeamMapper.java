@@ -26,7 +26,7 @@ public interface TeamMapper {
             @Result(property = "teamUsername",column = "team_username"),
             @Result(property = "teamPassword",column = "team_password")
     })
-    public Team findIdByName(String teamName);
+    Team findIdByName(String teamName);
 
     @Select("SELECT * FROM team")
     @ResultMap("teamMap")

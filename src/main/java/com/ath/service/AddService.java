@@ -9,6 +9,9 @@ import com.ath.entity.Team;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class AddService {
 
@@ -24,7 +27,8 @@ public class AddService {
     public void addTeam(Team team){
         teamMapper.insert(team);
         team.setId(teamMapper.findIdByName(team.getTeamName()).getId());
-        for(Athlete athlete:team.getMembers()) {
+        List<Athlete> members = team.getMembers();
+        for(Athlete athlete:members) {
             athlete.setTeamId(team.getId());
             athleteMapper.insert(athlete);
         }

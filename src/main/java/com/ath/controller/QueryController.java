@@ -9,11 +9,13 @@ import com.ath.entity.Athlete;
 import com.ath.entity.GradeForm;
 import com.ath.entity.Team;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/query")
@@ -40,6 +42,12 @@ public class QueryController {
     public List<Team> queryTeamAll(){
         List<Team> teams = teamMapper.getTeamAll();
         return teams;
+    }
+
+    @RequestMapping("/team/name")
+    public Team queryTeamByName(@RequestBody Map<String,String> map){
+        String teamName = map.get("teamName");
+        return teamMapper.findIdByName(teamName);
     }
 
     @RequestMapping("/grade/all")

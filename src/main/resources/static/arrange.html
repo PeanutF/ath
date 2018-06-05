@@ -1,8 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
@@ -11,13 +10,13 @@
 
     <!--bootstrap用于idea自动提醒功能-->
 
-    <link rel="stylesheet" href="dist/css/bootstrap.css"/>
     <title>login</title>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/arrange.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>Title</title>
 </head>
 <body>
-<!--预留的导航部分-->
 <div id="navigation">
     <nav class="navbar navbar-expand bg-dark navbar-dark center" >
         <ul class="navbar-nav offset-1">
@@ -43,36 +42,33 @@
         </ul>
     </nav>
 </div>
-<div class="container">
-    <div class="container">
-        <label for="teamName" class="form-inline">队伍名称&nbsp&nbsp&nbsp
-            <input id="teamName" class="form-control col-3" type="text">&nbsp&nbsp&nbsp
-            <button class="btn-primary btn" type="submit" id="findTeam">查询</button>
-        </label>
-    </div>
-    <br>
-    <div class="container">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>teamName</th>
-                    <th>leaderName</th>
-                    <th>leaderPhoneNumber</th>
-                    <th>leaderIdCard</th>
-                    <th>doctorName</th>
-                    <th>doctorPhoneNumber</th>
-                    <th>doctorIdCard</th>
-                </tr>
-            </thead>
-            <tbody id="teamTable" >
-            </tbody>
-        </table>
+
+<div id="main" class="container">
+    <div class="col-7">
+        <div class="form-group">
+            <label for="ath_name1">athlete name:</label>
+            <input type="text" class="form-control" id="ath_name1">
+        </div>
+        <div class="form-group">
+            <label for="ath_name2">athlete name:</label>
+            <input type="text" class="form-control" id="ath_name2">
+        </div>
+        <div class="form-group">
+            <label for="object_name">object name:</label>
+            <input type="text" class="form-control" id="object_name">
+        </div>
+        <div class="form-group">
+            <label for="referee_name">referee name:</label>
+            <input type="text" class="form-control" id="referee_name">
+        </div>
+        <div class="form-group">
+            <label for="group_number">group number:</label>
+            <input type="text" class="form-control" id="group_number">
+        </div>
+        <div class="form-group center">
+            <button type="submit" class="btn btn-primary" id="arrange">submit</button>
+        </div>
     </div>
 </div>
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 </body>
 </html>
