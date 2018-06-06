@@ -6,3 +6,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/athlete?useSSL=false
     username: root
     password: 2289108
+
+resources: # 指定静态资源的路径
+  static-locations: classpath:/static/
+  cache-period: 0

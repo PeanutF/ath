@@ -26,13 +26,13 @@ public class GradeService {
     @Autowired
     private FormMapper formMapper;
 
-    public void addForm(List<String> athleteNames, String refereeName, String objName, int groupNumber){
+    public void addForm(List<String> athleteNames, String refereeName, String objName, int groupNumber,int sex){
         ArrayList<Athlete> athletes = new ArrayList<>();
         for(String name : athleteNames){
             athletes.add(athleteMapper.getByName(name));
         }
         Referee referee = refereeMapper.findRefByName(refereeName);
-        Obj obj = objMapper.findObjByName(objName);
+        Obj obj = objMapper.findObjByNameAndSex(objName,sex);
         for(Athlete athlete : athletes){
             CompeteForm competeForm = new CompeteForm();
             competeForm.setAthId(athlete.getId());

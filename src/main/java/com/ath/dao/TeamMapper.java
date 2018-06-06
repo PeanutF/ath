@@ -13,7 +13,7 @@ public interface TeamMapper {
                 " VALUES(#{leaderName},#{leaderPhoneN},#{leaderIdCard},#{doctorName},#{doctorPhoneN},#{doctorIdCard},#{teamName},#{teamUsername},#{teamPassword})")
     public void insert(Team team);
 
-    @Select("SELECT team_id FROM team WHERE team_name = #{teamName}")
+    @Select("SELECT * FROM team WHERE team_name = #{teamName}")
     @Results(id = "teamMap",value = {
             @Result(property = "id",column = "team_id"),
             @Result(property = "leaderName",column = "leader_name"),
@@ -26,7 +26,7 @@ public interface TeamMapper {
             @Result(property = "teamUsername",column = "team_username"),
             @Result(property = "teamPassword",column = "team_password")
     })
-    Team findIdByName(String teamName);
+    Team findByName(String teamName);
 
     @Select("SELECT * FROM team")
     @ResultMap("teamMap")

@@ -21,6 +21,10 @@ public interface AthleteMapper {
     })
     List<Athlete> getAll();
 
+    @Select("SELECT * FROM athlete NATURE JOIN team WHERE team_name = #{teamName}")
+    @org.apache.ibatis.annotations.ResultMap("athleteMap")
+    List<Athlete> getByTeamName(@Param("teamName") String teamName);
+
     @Select("SELECT * FROM athlete WHERE ath_name = #{name}")
     @org.apache.ibatis.annotations.ResultMap("athleteMap")
     Athlete getByName(String name);

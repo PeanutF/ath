@@ -7,6 +7,7 @@ $(document).ready(function () {
         jsonObj.objectName = $("#object_name").val();
         jsonObj.refereeName = $("#referee_name").val();
         jsonObj.groupNumber = $("#group_number").val();
+        jsonObj.sex = $("#obj_sex").val();
 
         $.ajax({
             url:"grade/mark",

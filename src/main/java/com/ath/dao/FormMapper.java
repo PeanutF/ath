@@ -18,7 +18,7 @@ public interface FormMapper {
                 "VALUES(#{refId},#{athId},#{grade},#{objName})")
     public void insertGradeForm(GradeForm gradeForm);
 
-    @Select("SELECT * FROM compete_form")
+    @Select("SELECT * FROM compete_form order by obj_id,ath_id")
     @Results(id = "competeFormMap",value = {
             @Result(property = "objId",column = "obj_id"),
             @Result(property = "athId",column = "ath_id"),

@@ -46,7 +46,7 @@ $(document).ready(function () {
             contentType:"application/json; charset=utf-8",
             data:jsonData,
             dataType:"json",
-            success:function (data) {
+            success:function () {
                 alert("提交成功");
                 window.location.reload();
             }

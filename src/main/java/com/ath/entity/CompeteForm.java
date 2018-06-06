@@ -6,6 +6,24 @@ public class CompeteForm {
     private int athId;
     private int objId;
     private int groupNumber;
+    private String athName;
+    private String objName;
+
+    public String getObjName() {
+        return objName;
+    }
+
+    public void setObjName(String objName) {
+        this.objName = objName;
+    }
+
+    public String getAthName() {
+        return athName;
+    }
+
+    public void setAthName(String athName) {
+        this.athName = athName;
+    }
 
     public int getId() {
         return id;

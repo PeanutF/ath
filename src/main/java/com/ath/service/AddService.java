@@ -26,7 +26,7 @@ public class AddService {
 
     public void addTeam(Team team){
         teamMapper.insert(team);
-        team.setId(teamMapper.findIdByName(team.getTeamName()).getId());
+        team.setId(teamMapper.findByName(team.getTeamName()).getId());
         List<Athlete> members = team.getMembers();
         for(Athlete athlete:members) {
             athlete.setTeamId(team.getId());

@@ -4,10 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>login</title>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/login.js"></script>
-
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -16,7 +12,10 @@
     <!--bootstrap用于idea自动提醒功能-->
 
     <link rel="stylesheet" href="dist/css/bootstrap.css"/>
-    <script src="dist/js/bootstrap.js"></script>
+    <title>login</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="js/gradeSearch.js"></script>
 </head>
 <body>
 <!--预留的导航部分-->
@@ -33,7 +32,7 @@
                 <a class="nav-link" href="score.html">打分</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="dropdown-toggle nav-link" href="#" id="navDrop" data-toggle="dropdown">
+                <a class="dropdown-toggle nav-link" href="#subPages" id="navDrop" data-toggle="dropdown">
                     查询
                 </a>
                 <div class="dropdown-menu">
@@ -47,9 +46,9 @@
 </div>
 <div class="container">
     <div class="container">
-        <label for="teamName" class="form-inline">队伍名称&nbsp&nbsp&nbsp
-            <input id="teamName" class="form-control col-3" type="text">&nbsp&nbsp&nbsp
-            <button class="btn-primary btn" id="findTeam">查询</button>
+        <label for="athName" class="form-inline">运动员名称&nbsp&nbsp&nbsp
+            <input id="athName" class="form-control col-3" type="text" required="required">&nbsp&nbsp&nbsp
+            <button class="btn-primary btn" type="submit" id="findGrade">查询</button>
         </label>
     </div>
     <br>
@@ -57,17 +56,13 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>teamName</th>
-                    <th>leaderName</th>
-                    <th>leaderPhoneNumber</th>
-                    <th>leaderIdCard</th>
-                    <th>doctorName</th>
-                    <th>doctorPhoneNumber</th>
-                    <th>doctorIdCard</th>
-                    <th>operate</th>
+                    <th>name</th>
+                    <th>grade</th>
+                    <th>referee</th>
+                    <th>object name</th>
                 </tr>
             </thead>
-            <tbody id="teamTable" >
+            <tbody id="gradeTable" >
             </tbody>
         </table>
     </div>

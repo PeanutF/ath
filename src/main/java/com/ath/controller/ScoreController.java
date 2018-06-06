@@ -31,7 +31,8 @@ public class ScoreController {
         String refereeName = map.get("refereeName");
         String objName = map.get("objectName");
         int groupNumber = Integer.parseInt(map.get("groupNumber"));
-        gradeService.addForm(athNames,refereeName,objName,groupNumber);
+        int sex = Integer.parseInt(map.get("sex"));
+        gradeService.addForm(athNames,refereeName,objName,groupNumber,sex);
     }
 
     @RequestMapping("/setGrade")
